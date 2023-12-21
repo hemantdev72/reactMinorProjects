@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Accordian from './components/Accordian'
+import RandomColor from './components/RandomColor';
+import Star from './components/star/Star';
+import Image from './components/image/Image';
+import Button from './components/image-scroll/Button';
+import CartItem from './components/CartItem';
+
+import { useContext } from "react";
+import { cartContext } from './context/CartContext';
+import MenuList from './components/tree-view/MenuList';
+import QRCode from 'react-qr-code';
+import QrCode from './components/qrcode/QrCode';
 
 function App() {
+  const { item, setItem } = useContext(cartContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <Accordian />
+    // <RandomColor/>
+    // <Star/>
+    // <Image/>
+    // <Button />
+    <>
+    
+    <QrCode />
+    </>
+  
+    );
 }
 
-export default App;
+export default App
